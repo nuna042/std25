@@ -3,7 +3,7 @@
     <h3 class="panel-title"><i class="fa fa-users"></i> รายชื่อผู้ทดสอบมาตรฐานฝีมือแรงงาน</h3>
   </div>
   <div class="panel-body">
-    <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">+ เพิ่มผู้ทดสอบ</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTesterModal">+ เพิ่มผู้ทดสอบ</button>
     <form class="form-horizontal">
       <div class="form-group mt-20">
         <label class="col-md-2 control-label">เลือกสาขา</label>
@@ -31,10 +31,22 @@
     </table>
 
     *****
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal fade" id="addTesterModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">เพิ่มผู้ทดสอบมาตรฐานฝีมือแรงงาน</h4>
+          </div>
+          <div class="modal-body">
           ...
+          ทดสอบ
+          ---
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">ยกเลิก</button>
+            <button type="button" class="btn btn-primary">บันทึก</button>
+          </div>
         </div>
       </div>
     </div>
