@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TesterComponent } from './components/tester/tester.component';
-import { TestingComponent } from './components/testing/testing.component';
+import { CreateTesterComponent } from './components/tester/create-tester.component';
+import { ListTestersComponent } from './components/tester/list-testers.component';
 
 const routes: Routes = [
-  {path: 'tester', component: TesterComponent},
-  {path: 'testing', component: TestingComponent}
+  { path: 'create-tester', component: CreateTesterComponent },
+  { path: 'list-testers', component: ListTestersComponent }
 ];
 
 @NgModule({
@@ -13,4 +13,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [TesterComponent, TestingComponent]
+//export const routingComponents = [CreateTesterComponent, ListTestersComponent]

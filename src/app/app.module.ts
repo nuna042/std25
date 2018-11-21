@@ -1,14 +1,14 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppheaderComponent } from './components/appheader/appheader.component';
 import { AppfooterComponent } from './components/appfooter/appfooter.component';
 import { AppmenuComponent } from './components/appmenu/appmenu.component';
 import { AppsettingComponent } from './components/appsetting/appsetting.component';
-import { TesterComponent } from './components/tester/tester.component';
-import { TestingComponent } from './components/testing/testing.component';
+import { CreateTesterComponent } from './components/tester/create-tester.component';
+import { ListTestersComponent } from './components/tester/list-testers.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +17,9 @@ import { TestingComponent } from './components/testing/testing.component';
     AppfooterComponent,
     AppmenuComponent,
     AppsettingComponent,
-    routingComponents,
-    TesterComponent,
-    TestingComponent
+    //routingComponents,
+    CreateTesterComponent,
+    ListTestersComponent
   ],
   imports: [
     BrowserModule,
