@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-tester',
@@ -9,19 +9,18 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms'
 export class CreateTesterComponent implements OnInit {
 
   testerForm: FormGroup;
-  testerMessages = {
-    'panelTitle': 'รายการผู้ทดสอบ',
-    'list': 'รายการ',
-    'create': 'เพิ่มผู้ทดสอบ',
+
+  createTestersMessages = {
     'code': 'รหัสผู้ทดสอบ',
     'name': 'ชื่อ - นามสกุล',
-    'btn-save': 'บันทึก'
+    'btn_save': 'บันทึก'
   }
+  
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
     this.testerForm = this.fb.group({
-      testerCode: ['มฝร'],
+      testerCode: ['มฝร-'],
       fName: [''],
       lName:['']
     });
@@ -38,5 +37,4 @@ export class CreateTesterComponent implements OnInit {
       lName:['thepsoh']
     });
   }
-
 }

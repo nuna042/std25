@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateTesterComponent } from './components/tester/create-tester.component';
-import { ListTestersComponent } from './components/tester/list-testers.component';
 
 const routes: Routes = [
-  { path: 'create-tester', component: CreateTesterComponent },
-  { path: 'list-testers', component: ListTestersComponent }
+  { path: 'testers', loadChildren: './testers/testers.module#TestersModule' },
+  { path: 'candidates', loadChildren: './candidates/candidates.module#CandidatesModule' }
 ];
 
 @NgModule({

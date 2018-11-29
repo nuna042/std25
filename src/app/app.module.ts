@@ -8,8 +8,6 @@ import { AppheaderComponent } from './components/appheader/appheader.component';
 import { AppfooterComponent } from './components/appfooter/appfooter.component';
 import { AppmenuComponent } from './components/appmenu/appmenu.component';
 import { AppsettingComponent } from './components/appsetting/appsetting.component';
-import { CreateTesterComponent } from './components/tester/create-tester.component';
-import { ListTestersComponent } from './components/tester/list-testers.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +17,6 @@ import { ListTestersComponent } from './components/tester/list-testers.component
     AppmenuComponent,
     AppsettingComponent,
     //routingComponents,
-    CreateTesterComponent,
-    ListTestersComponent
   ],
   imports: [
     BrowserModule,

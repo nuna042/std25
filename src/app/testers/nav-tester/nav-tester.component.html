@@ -1,0 +1,20 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{navTestersMessages.panelTitle}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <label for="inputBlank" class="col-sm-offset-2 control-label"></label>
+      <div class="col-sm-8">
+        <div class="btn-toolbar">
+          <a class="btn btn-default" routerLink="./list-testers" role="button"><i class="fa fa-list"></i>
+            {{navTestersMessages.list}}</a>
+          <a class="btn btn-default" routerLink="./create-tester" role="button"><i class="fa fa-plus-square"></i>
+            {{navTestersMessages.create}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-30">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
