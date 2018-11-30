@@ -1,3 +1,12 @@
-<p>
-  list-testers works!
-</p>
+<table class="table table-hover">
+  <tr>
+    <th *ngFor="let col of columns">
+      {{col}}
+    </th>
+  </tr>
+  <tr *ngFor="let tester of testers | async">
+    <td>{{tester.code}}</td>
+    <td>{{tester.fName}} {{tester.lName}}</td>
+    <td><i class="fa fa-pencil"></i> | <i class="fa fa-close"></i></td>
+  </tr>
+</table>

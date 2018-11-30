@@ -11,8 +11,11 @@ export class CreateTesterComponent implements OnInit {
   testerForm: FormGroup;
 
   createTestersMessages = {
+    'cid': '13 หลัก',
     'code': 'รหัสผู้ทดสอบ',
     'name': 'ชื่อ - นามสกุล',
+    'fName': 'ชื่อ',
+    'lName': 'นามสกุล',
     'btn_save': 'บันทึก'
   }
   
@@ -20,6 +23,7 @@ export class CreateTesterComponent implements OnInit {
 
   ngOnInit() {
     this.testerForm = this.fb.group({
+      testerCid: [''],
       testerCode: ['มฝร-'],
       fName: [''],
       lName:['']
@@ -32,6 +36,7 @@ export class CreateTesterComponent implements OnInit {
 
   onLoadDataClick(): void {
     this.testerForm.patchValue({
+      testerCid: [''],
       testerCode: ['มฝร-1-204-5555'],
       fName: ['charat'],
       lName:['thepsoh']
