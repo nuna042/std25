@@ -7,12 +7,14 @@
       <label for="inputBlank" class="col-sm-offset-2 control-label"></label>
       <div class="col-sm-8">
         <div class="btn-toolbar">
-          <a class="btn btn-default" routerLink="./list-candidates" routerLinkActive="active" role="button"><i class="fa fa-list"></i> {{navCandidatesMessages.list}}</a>
-          <a class="btn btn-default" routerLink="./create-candidate" routerLinkActive="active" role="button"><i class="fa fa-plus-square"></i> {{navCandidatesMessages.create}}</a>
+          <a class="btn btn-default" routerLink="./search-candidate" routerLinkActive="active" role="button"><i class="fa fa-list"></i>
+            {{navCandidatesMessages.search}}</a>
+          <a class="btn btn-default" routerLink="./create-candidate" routerLinkActive="active" role="button"><i class="fa fa-plus-square"></i>
+            {{navCandidatesMessages.create}}</a>
         </div>
       </div>
     </div>
-
-    <router-outlet></router-outlet>
-
+    <div class="row mt-30">
+      <router-outlet></router-outlet>
+    </div>
   </div>

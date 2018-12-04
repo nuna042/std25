@@ -16,15 +16,27 @@
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
       <li routerLinkActive="active">
-        <a routerLink="/testers">
-          <i class="fa fa-user"></i>
-          <span>ผู้ทดสอบ</span>
+        <a routerLink="/candidates">
+          <i class="fa fa-users"></i>
+          <span>{{menuMessages.candidate}}</span>
         </a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/candidates">
-          <i class="fa fa-users"></i>
-          <span>ผู้เข้ารับการทดสอบ</span>
+        <a routerLink="/skill-testing">
+          <i class="fa fa-folder-open"></i>
+          <span>{{menuMessages.skill_testing}}</span>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/cert">
+          <i class="fa fa-mortar-board"></i>
+          <span>{{menuMessages.cert}}</span>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="/testers">
+          <i class="fa fa-user"></i>
+          <span>{{menuMessages.tester}}</span>
         </a>
       </li>
       <li class="treeview menu-open">

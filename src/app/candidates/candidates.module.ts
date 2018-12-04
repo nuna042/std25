@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CandidatesRoutingModule } from './candidates-routing.module';
-import { ListCandidatesComponent } from './list-candidates/list-candidates.component';
 import { CreateCandidateComponent } from './create-candidate/create-candidate.component';
 import { NavCandidatesComponent } from './nav-candidates/nav-candidates.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SearchCandidateComponent } from './search-candidate/search-candidate.component';
 
 @NgModule({
-  declarations: [ListCandidatesComponent, CreateCandidateComponent, NavCandidatesComponent],
+  declarations: [CreateCandidateComponent, NavCandidatesComponent, SearchCandidateComponent],
   imports: [
     CommonModule,
     CandidatesRoutingModule,

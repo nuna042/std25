@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'testers', loadChildren: './testers/testers.module#TestersModule' },
-  { path: 'candidates', loadChildren: './candidates/candidates.module#CandidatesModule' }
+  { path: 'candidates', loadChildren: './candidates/candidates.module#CandidatesModule' },
+  { path: 'skill-testing', loadChildren: './skill-testing/skill-testing.module#SkillTestingModule' },
+  { path: 'cert', loadChildren: './cert/cert.module#CertModule' }
 ];
 
 @NgModule({

@@ -9,7 +9,7 @@ export class NavCandidatesComponent implements OnInit {
 
   navCandidatesMessages = {
     'panelTitle': 'รายการผู้เข้ารับการทดสอบ',
-    'list': 'รายการ',
+    'search': 'ค้นหา',
     'create': 'เพิ่มผู้สมัคร',
     'code': 'รหัสผู้ทดสอบ',
     'name': 'ชื่อ - นามสกุล',
