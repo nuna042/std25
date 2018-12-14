@@ -1,4 +1,4 @@
-export const PROVINCES: any[] = [
+export const CHANGWATS: any[] = [
     {
         "pid": "10",
         "name": "กรุงเทพมหานคร"

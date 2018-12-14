@@ -2,14 +2,14 @@
   <div class="form-group">
     <label for="inputCid" class="col-sm-2 control-label">{{createCandidateMessages.cid}}</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputCid" formControlName="cid" placeholder="{{createCandidateMessages.cid}}">
+      <input type="text" (blur)="checkCID()" class="form-control" id="inputCid" formControlName="cid" placeholder="{{createCandidateMessages.cid}}">
     </div>
   </div>
-  
+
   <div class="form-group">
     <label for="input" class="col-sm-2 control-label">{{createCandidateMessages.titleName}}</label>
     <div class="col-sm-4">
-      <select class="form-control" formControlName="titleName">
+      <select class="form-control" formControlName="titleName" (change)="fileterGender()">
         <option *ngFor="let title of titles" value="{{title}}">{{title}}</option>
       </select>
     </div>
@@ -28,17 +28,22 @@
   <div class="form-group">
     <label for="inputGender" class="col-sm-2 control-label">{{createCandidateMessages.genderTitle}}</label>
     <div class="col-sm-4">
-      <select class="form-control" formControlName="gender">
-        <option value="M">{{createCandidateMessages.gender.men}}</option>
-        <option value="F">{{createCandidateMessages.gender.women}}</option>
-      </select>
+      <label for="gender" class="radio-inline">
+        <input type="radio" name="gender" formControlName="gender" value="male">{{createCandidateMessages.gender.male}}
+      </label>
+      <label for="gender" class="radio-inline">
+        <input type="radio" name="gender" formControlName="gender" value="female">{{createCandidateMessages.gender.female}}
+      </label>
     </div>
   </div>
 
   <div class="form-group">
     <label for="inputDob" class="col-sm-2 control-label">{{createCandidateMessages.dob}}</label>
     <div class="col-sm-4">
-      <input type="text" class="form-control" id="inputDob" formControlName="dob" placeholder="{{createCandidateMessages.dob}}">
+      <input type="text" class="form-control" id="inputDob" formControlName="dob" (blur)="calAge()" placeholder="{{createCandidateMessages.dob}}  เช่น 01/12/2500">
+    </div>
+    <div class="col-sm-4">
+      <span class="help-block" *ngIf="age">{{age.year}} ปี {{age.month}} เดือน {{age.day}} วัน</span>
     </div>
   </div>
 
@@ -48,38 +53,36 @@
       <input type="text" class="form-control" id="inputAddr1" formControlName="addr1" placeholder="{{createCandidateMessages.addr}}">
     </div>
   </div>
-  
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-8">
       <input type="text" class="form-control" id="inputAddr2" formControlName="addr2" placeholder="{{createCandidateMessages.addr}}">
     </div>
   </div>
-  
+
   <div class="form-group">
-    <label for="input" class="col-sm-2 control-label">{{createCandidateMessages.province}}</label>
+    <label for="input" class="col-sm-2 control-label">{{createCandidateMessages.changwat}}</label>
     <div class="col-sm-4">
-      <select class="form-control" formControlName="province">
-        <option *ngFor="let province of provinces | async" value="{{province.pid}}">{{province.name}}</option>
+      <select class="form-control" formControlName="changwat" (change)="filterAmphoe()">
+        <option *ngFor="let changwat of changwats | async" value="{{changwat.pid}}">{{changwat.name}}</option>
       </select>
     </div>
   </div>
-  
+
   <div class="form-group">
-    <label for="input" class="col-sm-2 control-label">{{createCandidateMessages.amphur}}</label>
+    <label for="input" class="col-sm-2 control-label">{{createCandidateMessages.amphoe}}</label>
     <div class="col-sm-4">
-      <select class="form-control" formControlName="amphur">
-        <option value="M">{{createCandidateMessages.gender.men}}</option>
-        <option value="F">{{createCandidateMessages.gender.women}}</option>
+      <select class="form-control" formControlName="amphoe" (change)="filterTambon()">
+        <option *ngFor="let amphoe of amphoes | async" value="{{amphoe.pid}}">{{amphoe.name}}</option>
       </select>
     </div>
   </div>
-  
+
   <div class="form-group">
     <label for="input" class="col-sm-2 control-label">{{createCandidateMessages.tambon}}</label>
     <div class="col-sm-4">
       <select class="form-control" formControlName="tambon">
-        <option value="M">{{createCandidateMessages.gender.men}}</option>
-        <option value="F">{{createCandidateMessages.gender.women}}</option>
+        <option *ngFor="let tambon of tambons | async" value="{{tambon.pid}}">{{tambon.name}}</option>
       </select>
     </div>
   </div>
@@ -101,3 +104,4 @@
     </div>
   </div>
 </form>
+Angular Generate Form Model : {{createCandidateForm.value | json}}

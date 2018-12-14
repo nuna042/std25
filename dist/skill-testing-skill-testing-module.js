@@ -18,7 +18,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  create-skill-testing works!\n</p>\n"
+module.exports = "<p>\r\n  create-skill-testing works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -81,7 +81,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  list-skill-testing works!\n</p>\n"
+module.exports = "<p>\r\n  list-skill-testing works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -144,7 +144,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-success\">\n  <div class=\"panel-heading\">\n    <h3 class=\"panel-title\">{{navSkillTestingMessages.panelTitle}}</h3>\n  </div>\n  <div class=\"panel-body\">\n    <div class=\"form-group\">\n      <label for=\"inputBlank\" class=\"col-sm-offset-2 control-label\"></label>\n      <div class=\"col-sm-8\">\n        <div class=\"btn-toolbar\">\n          <a class=\"btn btn-default\" routerLink=\"./list-testers\" role=\"button\"><i class=\"fa fa-list\"></i>\n            {{navSkillTestingMessages.list}}</a>\n          <a class=\"btn btn-default\" routerLink=\"./create-tester\" role=\"button\"><i class=\"fa fa-plus-square\"></i>\n            {{navSkillTestingMessages.create}}</a>\n        </div>\n      </div>\n    </div>\n    <div class=\"row mt-30\">\n      <router-outlet></router-outlet>\n    </div>\n  </div>"
+module.exports = "<div class=\"panel panel-success\">\r\n  <div class=\"panel-heading\">\r\n    <h3 class=\"panel-title\">{{navSkillTestingMessages.panelTitle}}</h3>\r\n  </div>\r\n  <div class=\"panel-body\">\r\n    <div class=\"form-group\">\r\n      <label for=\"inputBlank\" class=\"col-sm-offset-2 control-label\"></label>\r\n      <div class=\"col-sm-8\">\r\n        <div class=\"btn-toolbar\">\r\n          <a class=\"btn btn-default\" routerLink=\"./list-testers\" role=\"button\"><i class=\"fa fa-list\"></i>\r\n            {{navSkillTestingMessages.list}}</a>\r\n          <a class=\"btn btn-default\" routerLink=\"./create-tester\" role=\"button\"><i class=\"fa fa-plus-square\"></i>\r\n            {{navSkillTestingMessages.create}}</a>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row mt-30\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  </div>"
 
 /***/ }),
 

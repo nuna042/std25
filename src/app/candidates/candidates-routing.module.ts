@@ -5,7 +5,7 @@ import { CreateCandidateComponent } from './create-candidate/create-candidate.co
 import { SearchCandidateComponent } from './search-candidate/search-candidate.component';
 
 const routes: Routes = [
-  {    
+  {
     path: '', component: NavCandidatesComponent,
     children: [
       { path: 'search-candidate', component: SearchCandidateComponent },
