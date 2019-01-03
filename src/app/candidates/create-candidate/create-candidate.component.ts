@@ -22,8 +22,8 @@ export class CreateCandidateComponent implements OnInit {
     'cid': '13 หลัก',
     'titleName': 'คำนำหน้า',
     'name': 'ชื่อ - นามสกุล',
-    'fName': 'ชื่อ',
-    'lName': 'นามสกุล',
+    'firstName': 'ชื่อ',
+    'lastName': 'นามสกุล',
     'genderTitle': 'เพศ',
     'gender': { 'male': 'ชาย', 'female': 'หญิง' },
     'dob': 'วันเกิด',
@@ -31,7 +31,7 @@ export class CreateCandidateComponent implements OnInit {
     'changwat': 'จังหวัด',
     'amphoe': 'อำเภอ',
     'tambon': 'ตำบล',
-    'tel': 'โทรศัพท์',
+    'phoneNumber': 'โทรศัพท์',
     'btn_save': 'บันทึก'
   }
 
@@ -57,8 +57,8 @@ export class CreateCandidateComponent implements OnInit {
     this.createCandidateForm = this.fb.group({
       cid: [''],
       titleName: ['นาย'],
-      fName: [''],
-      lName: [''],
+      firstName: [''],
+      lastName: [''],
       gender: ['male'],
       dob: ['3/8/2526'],
       addr1: [''],
@@ -66,7 +66,7 @@ export class CreateCandidateComponent implements OnInit {
       changwat: ['96'],
       amphoe: ['9601'],
       tambon: ['960101'],
-      tel: ['']
+      phoneNumber: ['']
     });
   }
 

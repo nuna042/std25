@@ -1,11 +1,46 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PersonalService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  createPerson(name, price) {
+    const uri = 'http://localhost:3000/person/create';
+    const obj = {
+      name: name,
+      price: price
+    };
+    this
+      .http
+      .post(uri, obj)
+      .subscribe(res =>
+          console.log('Done'));
+  }
+
+  getPersons() {
+    const uri = 'http://localhost:3000/person';
+    return this
+            .http
+            .get(uri)
+            .map(res => {
+              return res;
+            });
+  }
+
+  editPerson(id) {
+    const uri = 'http://localhost:3000/person/edit/' + id;
+    return this
+            .http
+            .get(uri)
+            .map(res => {
+              return res;
+            });
+  }
 
   checkCID(_cid): boolean {
     if (_cid.length != 13) return false;

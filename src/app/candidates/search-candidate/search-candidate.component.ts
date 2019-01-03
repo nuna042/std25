@@ -13,8 +13,8 @@ export class SearchCandidateComponent implements OnInit {
   searchCandidateMessages = {
     'cid': '13 หลัก',
     'name': 'ชื่อ - นามสกุล',
-    'fName': 'ชื่อ',
-    'lName': 'นามสกุล',
+    'firstName': 'ชื่อ',
+    'lastName': 'นามสกุล',
     'btn_search': 'ค้นหา',
     'btn_reset': 'ล้าง'
   }
@@ -24,8 +24,8 @@ export class SearchCandidateComponent implements OnInit {
   ngOnInit() {
     this.searchCandidateForm = this.fb.group({
       cid: [''],
-      fName: [''],
-      lName:['']
+      firstName: [''],
+      lastName:['']
     });
   }
 
